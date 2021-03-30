@@ -82,10 +82,10 @@
 
 @media (max-width: 575.98px) {
     .assign-popup {
-        .popup-body{
+        .popup-body, .release-date-group{
             display: block!important;
         }
-        .col-4, .col-8 {
+        .col-4, .col-8, .col-6 {
             -ms-flex: 0 0 100%;
             flex: 0 0 100%;
             max-width: 100%;
