@@ -2,15 +2,6 @@ $( document ).ready(function() {
   $('.data-fancybox-edu').on('click', function() {
     AssignPopupModule.init();
   });
-
-  $(document).on('click', '.due-date-btn', function() {
-    $('#release-date').focus().click();
-    var e = jQuery.Event("keydown");
-    e.which = 115; // # Some key code value
-    $('#release-date').trigger(e);
-  });
-  
- 
 });
 
 
@@ -54,10 +45,8 @@ var AssignPopupModule = (function () {
                   </div>
                    <div class="col-6">
                     <div class="due-date-container">
-                      <input type="date" id="due-date" class="form-control">
-                      <div class="open-due-date">
-                        <button type="button">+ Due Date</button>
-                      </div>
+                      <input type="date" id="due-date" class="form-control d-none">
+                      <a href="##" class="due-date-btn font-weight-bold">+ Due Date</a>
                     </div>
                    </div>
                 </div>
@@ -96,9 +85,17 @@ var AssignPopupModule = (function () {
     });
   }
 
+  function showDueDate() {
+    $(document).on('click', '.due-date-btn', function() {
+      $(this).remove();
+      $('#due-date').removeClass('d-none');
+    });
+  }
+
   function init() {
     assignPopup();
     countInput();
+    showDueDate();
   }
 
   return {
