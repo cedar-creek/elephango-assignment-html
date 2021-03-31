@@ -39,7 +39,7 @@ var AssignPopupModule = (function () {
   
               <div class="form-group">
                 <label for="release-date">Release Date <span class="font-weight-normal">(optional)</span></label>
-                <div class="d-flex align-items-center release-date-group">
+                <div class="d-flex align-items-center release-date-group row">
                   <div class="col-6">
                     <input type="date" id="release-date" class="form-control">
                   </div>
